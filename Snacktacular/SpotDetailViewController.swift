@@ -30,17 +30,24 @@ class SpotDetailViewController: UIViewController {
         if spot == nil {
             spot = Spot()
         }
-        nameField.text = spot.name
-        addressField.text = spot.address
         
-        let region = MKCoordinateRegion(center: spot.coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let region = MKCoordinateRegion(center: spot.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         mapView.setRegion(region, animated: true)
+        updateUserInterface()
     }
     
     func updateUserInterface() {
         nameField.text = spot.name
         addressField.text = spot.address
+        updateMap()
     }
+    
+    func updateMap() {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(spot)
+        mapView.setCenter(spot.coordinate, animated: true)
+    }
+    
     
     func leaveViewController() {
         let isPresentingInAddMode = presentingViewController is UINavigationController
@@ -84,7 +91,7 @@ extension SpotDetailViewController : GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         spot.name = place.name!
         spot.address = place.formattedAddress ?? ""
-        spot.coordinates = place.coordinate
+        spot.coordinate = place.coordinate
         dismiss(animated: true, completion: nil)
         updateUserInterface()
     }
