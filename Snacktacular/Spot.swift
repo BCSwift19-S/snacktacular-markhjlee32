@@ -66,20 +66,20 @@ class Spot: NSObject, MKAnnotation {
     
     func saveData(completed: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()
-        //GRAB USER ID
+        // Grab the userID
         guard let postingUserID = (Auth.auth().currentUser?.uid) else {
-            print("*** ERROR: could not save data because we don't have a valid postingUserID")
+            print("*** ERROR: Could not save data because we don't have a valid postingUserID")
             return completed(false)
         }
         self.postingUserID = postingUserID
-        //create dictionary representing the data we want to save
+        // Create the dictionary representing the data we want to save
         let dataToSave = self.dictionary
-        //if we HAVE saved a record, we'll have a documentID
+        // if we HAVE saved a record, we'll have a documentID
         if self.documentID != "" {
             let ref = db.collection("spots").document(self.documentID)
             ref.setData(dataToSave) { (error) in
                 if let error = error {
-                    print("**** ERROR: updating document \(self.documentID) \(error.localizedDescription)")
+                    print("*** ERROR: updating document \(self.documentID) \(error.localizedDescription)")
                     completed(false)
                 } else {
                     print("^^^ Document updated with ref ID \(ref.documentID)")
@@ -87,13 +87,14 @@ class Spot: NSObject, MKAnnotation {
                 }
             }
         } else {
-            var ref: DocumentReference? = nil //  let firestore create the new documentID
+            var ref: DocumentReference? = nil // Let firestore create the new documentID
             ref = db.collection("spots").addDocument(data: dataToSave) { error in
                 if let error = error {
-                    print("**** ERROR: creating new document \(error.localizedDescription)")
+                    print("*** ERROR: creating new document \(error.localizedDescription)")
                     completed(false)
                 } else {
                     print("^^^ new document created with ref ID \(ref?.documentID ?? "unknown")")
+                    self.documentID = ref!.documentID
                     completed(true)
                 }
             }

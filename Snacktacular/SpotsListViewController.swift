@@ -20,7 +20,6 @@ class SpotsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         
