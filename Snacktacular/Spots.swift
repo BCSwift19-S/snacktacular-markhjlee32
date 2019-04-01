@@ -3,7 +3,7 @@
 //  Snacktacular
 //
 //  Created by Alice Liang on 3/31/19.
-//  Copyright © 2019 John Gallaugher. All rights reserved.
+//  Copyright © 2019 Alice Liang. All rights reserved.
 //
 
 import Foundation
