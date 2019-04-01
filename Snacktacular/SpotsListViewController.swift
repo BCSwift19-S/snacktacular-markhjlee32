@@ -22,16 +22,19 @@ class SpotsListViewController: UIViewController {
         super.viewDidLoad()
         
         authUI = FUIAuth.defaultAuthUI()
-        authUI.delegate = self
+        authUI?.delegate = self
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = true
         
         spots = Spots()
-        spots.spotArray.append(Spot(name: "El Pelon", address: "Comm. Ave", coordinates: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
-        spots.spotArray.append(Spot(name: "Shake Shack", address: "The Street - Chestnut Hill", coordinates: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
-        spots.spotArray.append(Spot(name: "Pino's Pizza", address: "Cleveland Circle", coordinates: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        spots.loadData {
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
