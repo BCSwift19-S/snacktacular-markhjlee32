@@ -23,6 +23,7 @@ class SpotsTableViewCell: UITableViewCell {
         // calculate distance here
         guard let currentLocation = currentLocation else {
             return
+            
         }
         let distanceInMeters = currentLocation.distance(from: spot.location)
         let distanceString = "Distance: \((distanceInMeters * 0.000062137).roundTo(places: 2)) miles"
