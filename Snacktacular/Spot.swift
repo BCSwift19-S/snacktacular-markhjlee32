@@ -94,7 +94,7 @@ class Spot: NSObject, MKAnnotation {
             var ref: DocumentReference? = nil // Let firestore create the new documentID
             ref = db.collection("spots").addDocument(data: dataToSave) { error in
                 if let error = error {
-                    print("*** ERROR: creating new document \(error.localizedDescription)")
+                    print("****** ERROR: creating new document \(error.localizedDescription)")
                     completed(false)
                 } else {
                     print("^^^ new document created with ref ID \(ref?.documentID ?? "unknown")")
