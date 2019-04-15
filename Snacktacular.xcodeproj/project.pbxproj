@@ -20,6 +20,7 @@
 		D14CC20E2251947600E44B3D /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CC20D2251947600E44B3D /* Spot.swift */; };
 		D14CC2102251957200E44B3D /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CC20F2251957200E44B3D /* Spots.swift */; };
 		D14CC2122251A30600E44B3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D14CC2112251A30600E44B3D /* GoogleService-Info.plist */; };
+		D1D581312264E0D000ADFEC7 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D581302264E0D000ADFEC7 /* Double+roundTo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D14CC20D2251947600E44B3D /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		D14CC20F2251957200E44B3D /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		D14CC2112251A30600E44B3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D1D581302264E0D000ADFEC7 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				3E0F960B2065A17500AE450D /* SpotDetailViewController.swift */,
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
+				D1D581302264E0D000ADFEC7 /* Double+roundTo.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
@@ -312,6 +315,7 @@
 				D14CC20E2251947600E44B3D /* Spot.swift in Sources */,
 				3E8390E0206597F600512DEA /* AppDelegate.swift in Sources */,
 				D14CC2102251957200E44B3D /* Spots.swift in Sources */,
+				D1D581312264E0D000ADFEC7 /* Double+roundTo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
