@@ -28,15 +28,28 @@ class ReviewTableViewController: UITableViewController {
                 let image = UIImage(named: (starButton.tag < rating ? "star-filled" : "star-empty"))
                 starButton.setImage(image, for: .normal)
             }
-            
+            review.rating = rating
         }
     }
+    var spot: Spot!
+    var review: Review!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        guard let spot = spot else {
+            print("ERROR: did not have a valid spot in reviewDetailViewController")
+            return
+        }
+        nameLabel.text = spot.name
+        addressLabel.text = spot.address
+        
+        if review == nil {
+            review = Review()
+        }
     }
     
     func leaveViewController() {
@@ -58,6 +71,15 @@ class ReviewTableViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        review.title = reviewTitle.text!
+        review.text = reviewView.text!
+        review.saveData (spot: spot){ success in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("*** ERROR: couldn't leave this view controller because data wasn't saved.")
+            }
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
