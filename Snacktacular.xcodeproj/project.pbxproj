@@ -22,6 +22,8 @@
 		D14CC20E2251947600E44B3D /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CC20D2251947600E44B3D /* Spot.swift */; };
 		D14CC2102251957200E44B3D /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CC20F2251957200E44B3D /* Spots.swift */; };
 		D14CC2122251A30600E44B3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D14CC2112251A30600E44B3D /* GoogleService-Info.plist */; };
+		D1CC170822666B2900519ABD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC170722666B2900519ABD /* Photo.swift */; };
+		D1CC170A22666BF400519ABD /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC170922666BF400519ABD /* Photos.swift */; };
 		D1D581312264E0D000ADFEC7 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D581302264E0D000ADFEC7 /* Double+roundTo.swift */; };
 		D1EB9A2A2264F1F100BC34F0 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EB9A292264F1F100BC34F0 /* ReviewTableViewController.swift */; };
 		D1F6A1F02264E4DD0057747D /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F6A1EF2264E4DD0057747D /* UIView+addBorder.swift */; };
@@ -47,6 +49,8 @@
 		D14CC20D2251947600E44B3D /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		D14CC20F2251957200E44B3D /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		D14CC2112251A30600E44B3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D1CC170722666B2900519ABD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		D1CC170922666BF400519ABD /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		D1D581302264E0D000ADFEC7 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
 		D1EB9A292264F1F100BC34F0 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		D1F6A1EF2264E4DD0057747D /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				D14CC20F2251957200E44B3D /* Spots.swift */,
 				D14CC20D2251947600E44B3D /* Spot.swift */,
 				D12D386922650177002A0457 /* Reviews.swift */,
+				D1CC170922666BF400519ABD /* Photos.swift */,
+				D1CC170722666B2900519ABD /* Photo.swift */,
 				D12D38672264FB1B002A0457 /* Review.swift */,
 				3E8390E1206597F600512DEA /* SpotsListViewController.swift */,
 				3E0F960920659D9000AE450D /* SpotsTableViewCell.swift */,
@@ -319,8 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CC170822666B2900519ABD /* Photo.swift in Sources */,
 				D12D386A22650177002A0457 /* Reviews.swift in Sources */,
 				3E8390E2206597F600512DEA /* SpotsListViewController.swift in Sources */,
+				D1CC170A22666BF400519ABD /* Photos.swift in Sources */,
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
