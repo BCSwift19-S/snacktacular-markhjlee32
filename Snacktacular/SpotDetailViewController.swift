@@ -23,7 +23,7 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var spot: Spot!
-    var reviews = [Review]()
+    var reviews: Reviews!
     let regionDistance: CLLocationDistance = 750 //750 meters or about a half mile
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -34,6 +34,10 @@ class SpotDetailViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
 //        mapView.delegate = self
         
         if spot == nil {
@@ -51,9 +55,20 @@ class SpotDetailViewController: UIViewController {
             navigationController?.setToolbarHidden(true, animated: true)
         }
         
+        reviews = Reviews()
+        
         let region = MKCoordinateRegion(center: spot.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         mapView.setRegion(region, animated: true)
         updateUserInterface()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reviews.loadData(spot: spot) {
+            self.tableView.reloadData()
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,7 +86,7 @@ class SpotDetailViewController: UIViewController {
             let destination = segue.destination as! ReviewTableViewController
             destination.spot = spot
             let selectedIndexPath = tableView.indexPathForSelectedRow!
-            destination.review = reviews[selectedIndexPath.row]
+            destination.review = reviews.reviewArray[selectedIndexPath.row]
         default:
             print("***ERROR")
         }
@@ -233,4 +248,20 @@ extension SpotDetailViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Fail to get user location.")
     }
+}
+
+
+extension SpotDetailViewController: UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reviews.reviewArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as! SpotReviewsTableViewCell
+        cell.review = reviews.reviewArray[indexPath.row]
+        return cell
+        
+    }
+    
+    
 }
