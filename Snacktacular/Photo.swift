@@ -2,7 +2,7 @@
 //  Photo.swift
 //  Snacktacular
 //
-//  Created by Alice Liang on 4/16/19.
+//  Created by Jason Tee on 4/16/19.
 //  Copyright © 2019 John Gallaugher. All rights reserved.
 //
 

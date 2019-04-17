@@ -481,7 +481,7 @@
 				DEVELOPMENT_TEAM = 3K5AC4PGQ7;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liang.Snacktacular;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tee.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,7 +497,7 @@
 				DEVELOPMENT_TEAM = 3K5AC4PGQ7;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liang.Snacktacular;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tee.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

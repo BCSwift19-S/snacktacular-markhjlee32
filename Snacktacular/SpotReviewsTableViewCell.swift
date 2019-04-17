@@ -2,8 +2,8 @@
 //  SpotReviewsTableViewCell.swift
 //  Snacktacular
 //
-//  Created by Alice Liang on 3/23/18.
-//  Copyright © 2018 Alice Liang. All rights reserved.
+//  Created by Jason Tee on 3/23/18.
+//  Copyright © 2018 Jason Tee All rights reserved.
 //
 
 import UIKit
