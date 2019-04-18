@@ -2,8 +2,8 @@
 //  Review.swift
 //  Snacktacular
 //
-//  Created by Jason Tee on 4/15/19.
-//  Copyright © 2019 John Gallaugher. All rights reserved.
+//  Created by Mark Lee on 3/23/18.
+//  Copyright © 2019 Mark Lee. All rights reserved.
 //
 
 import Foundation

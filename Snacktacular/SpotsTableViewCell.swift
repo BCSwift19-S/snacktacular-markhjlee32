@@ -2,8 +2,8 @@
 //  SpotsListTableViewCell.swift
 //  Snacktacular
 //
-//  Created by Jason Tee on 3/23/18.
-//  Copyright © 2019 Jason Tee. All rights reserved.
+//  Created by Mark Lee on 3/23/18.
+//  Copyright © 2019 Mark Lee. All rights reserved.
 //
 
 import UIKit
